@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pebble Jira Sync</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <div>
+          <h1>Pebble Jira Sync</h1>
+          <p>Sign in once on your phone, order Jira statuses, and keep the watch-ready board in sync.</p>
+        </div>
+        <a class="watch-link" href="/watch.html">Open watch view</a>
+      </header>
+
+      <section class="card" id="login-card">
+        <h2>Connect Jira securely</h2>
+        <form id="login-form">
+          <label>
+            Jira base URL
+            <input id="base-url" name="baseUrl" placeholder="https://your-domain.atlassian.net" required />
+          </label>
+          <label>
+            Jira email
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Jira API token
+            <input id="api-token" name="apiToken" type="password" required />
+          </label>
+          <label>
+            JQL
+            <input
+              id="jql"
+              name="jql"
+              placeholder="assignee = currentUser() ORDER BY updated DESC"
+            />
+          </label>
+          <button type="submit">Connect</button>
+        </form>
+        <p class="status-message" id="login-message"></p>
+      </section>
+
+      <section class="card hidden" id="board-card">
+        <div class="card-header">
+          <div>
+            <h2>Status ordering</h2>
+            <p id="board-subtitle"></p>
+          </div>
+          <button id="logout-button" class="secondary">Disconnect</button>
+        </div>
+        <ol class="status-order" id="status-order"></ol>
+        <div class="board-grid" id="board-grid"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

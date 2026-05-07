@@ -3,7 +3,7 @@
   "displayName": "Pebble Jira Sync",
   "shortName": "Jira Sync",
   "longName": "Pebble Jira Sync",
-  "companyName": "pebble-jira-sync",
+  "companyName": "galegozi",
   "versionLabel": "1.0",
   "sdkVersion": "3",
   "targetPlatforms": ["aplite", "basalt", "chalk", "emery"],

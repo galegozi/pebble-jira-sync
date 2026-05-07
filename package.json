@@ -21,7 +21,7 @@
     "displayName": "Pebble Jira Sync",
     "shortName": "Jira Sync",
     "longName": "Pebble Jira Sync",
-    "companyName": "pebble-jira-sync",
+    "companyName": "galegozi",
     "versionLabel": "1.0",
     "watchapp": {
       "watchface": false

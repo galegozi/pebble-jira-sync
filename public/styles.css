@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172b4d;
+}
+
+.app-shell,
+.watch-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.page-header.compact {
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(23, 43, 77, 0.08);
+  margin-bottom: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  border-radius: 10px;
+}
+
+input,
+select {
+  border: 1px solid #c1c7d0;
+  padding: 10px 12px;
+}
+
+button {
+  border: none;
+  background: #0052cc;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 14px;
+}
+
+button.secondary {
+  background: #dfe1e6;
+  color: #172b4d;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.watch-link {
+  text-decoration: none;
+  color: #0052cc;
+  font-weight: 700;
+}
+
+.status-message {
+  color: #5e6c84;
+}
+
+.status-order {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.status-order-item,
+.watch-issue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #ebecf0;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.status-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.board-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.status-column,
+.watch-group {
+  border: 1px solid #ebecf0;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fafbfc;
+}
+
+.issue-card {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #ebecf0;
+  margin-bottom: 10px;
+}
+
+.empty-state {
+  color: #5e6c84;
+}
+
+.watch-page .watch-shell {
+  max-width: 480px;
+}
+
+.watch-issue {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.watch-transition-picker {
+  display: grid;
+  gap: 8px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "pebble-jira-sync",
+  "version": "1.0.0",
+  "description": "An app to sync Jira to Pebble.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

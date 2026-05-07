@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pebble Jira Sync Watch View</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="watch-page">
+    <main class="watch-shell">
+      <header class="page-header compact">
+        <div>
+          <h1>Watch status changes</h1>
+          <p>Use the status order from the phone app and update issues in a few taps.</p>
+        </div>
+        <a class="watch-link" href="/">Phone view</a>
+      </header>
+
+      <section class="card">
+        <p class="status-message" id="watch-message"></p>
+        <div id="watch-groups"></div>
+      </section>
+    </main>
+
+    <script src="/watch.js"></script>
+  </body>
+</html>

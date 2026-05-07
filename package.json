@@ -15,7 +15,7 @@
   },
   "pebble": {
     "sdkVersion": "3",
-    "targetPlatforms": ["aplite", "basalt", "chalk"],
+    "targetPlatforms": ["aplite", "basalt", "chalk", "emery"],
     "enableMultiJS": true,
     "uuid": "48f732cc-b104-41d4-b8da-da4741575327",
     "shortName": "Jira Sync",

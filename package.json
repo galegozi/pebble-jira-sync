@@ -12,5 +12,21 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "pebble": {
+    "sdkVersion": "3",
+    "targetPlatforms": ["aplite", "basalt", "chalk"],
+    "enableMultiJS": true,
+    "uuid": "48f732cc-b104-41d4-b8da-da4741575327",
+    "shortName": "Jira Sync",
+    "longName": "Pebble Jira Sync",
+    "companyName": "",
+    "versionLabel": "1.0",
+    "watchapp": {
+      "watchface": false
+    },
+    "resources": {
+      "media": []
+    }
   }
 }

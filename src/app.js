@@ -101,7 +101,13 @@ function isAllowedBaseUrl(baseUrl) {
 }
 
 function normalizeBaseUrl(baseUrl) {
-  return baseUrl.replace(/\/+$/, "");
+  let normalized = baseUrl;
+
+  while (normalized.endsWith("/")) {
+    normalized = normalized.slice(0, -1);
+  }
+
+  return normalized;
 }
 
 function toIssueSummary(issue) {

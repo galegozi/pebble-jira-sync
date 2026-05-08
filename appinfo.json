@@ -7,8 +7,19 @@
   "versionLabel": "1.0",
   "sdkVersion": "3",
   "targetPlatforms": ["aplite", "basalt", "chalk", "emery"],
+  "capabilities": ["configurable"],
   "watchapp": {
     "watchface": false
+  },
+  "appKeys": {
+    "CMD": 0,
+    "INDEX": 1,
+    "ISSUE_KEY": 2,
+    "ISSUE_SUMMARY": 3,
+    "ISSUE_STATUS": 4,
+    "TRANS_ID": 5,
+    "TRANS_NAME": 6,
+    "MSG": 7
   },
   "resources": {
     "media": []

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pebble Jira Sync – Settings</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 1rem;
+        max-width: 480px;
+        margin: 0 auto;
+        background: #f5f5f5;
+      }
+      h1 { font-size: 1.4rem; margin-bottom: 1rem; }
+      label { display: block; margin: 0.75rem 0 0.2rem; font-weight: 600; }
+      input {
+        width: 100%;
+        padding: 0.45rem 0.5rem;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      button {
+        display: block;
+        width: 100%;
+        margin-top: 1.25rem;
+        padding: 0.7rem;
+        background: #0052cc;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      button:hover { background: #0041a8; }
+      p.note { font-size: 0.85rem; color: #666; margin-top: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Jira Settings</h1>
+    <form id="config-form">
+      <label for="baseUrl">Jira base URL</label>
+      <input
+        id="baseUrl"
+        name="baseUrl"
+        type="url"
+        placeholder="https://your-domain.atlassian.net"
+        required
+      />
+
+      <label for="email">Jira email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+      <label for="apiToken">Jira API token</label>
+      <input id="apiToken" name="apiToken" type="password" required />
+
+      <label for="jql">JQL (optional)</label>
+      <input
+        id="jql"
+        name="jql"
+        placeholder="assignee = currentUser() ORDER BY updated DESC"
+      />
+
+      <button type="submit">Save &amp; close</button>
+    </form>
+    <p class="note">
+      Your credentials are stored only on your phone and are never shared with
+      any third-party server.
+    </p>
+    <script>
+      // Pre-fill fields from query string (values passed by pkjs showConfiguration).
+      var params = new URLSearchParams(location.search);
+      ["baseUrl", "email", "jql"].forEach(function (key) {
+        var val = params.get(key);
+        if (val) document.getElementById(key).value = val;
+      });
+
+      document.getElementById("config-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var config = {
+          baseUrl:  document.getElementById("baseUrl").value.trim(),
+          email:    document.getElementById("email").value.trim(),
+          apiToken: document.getElementById("apiToken").value,
+          jql:      document.getElementById("jql").value.trim(),
+        };
+        // Return the config to the Pebble app via the webview close URL.
+        location.replace(
+          "pebble://webview/close?data=" + encodeURIComponent(JSON.stringify(config))
+        );
+      });
+    </script>
+  </body>
+</html>

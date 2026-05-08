@@ -1,0 +1,16 @@
+{
+  "uuid": "48f732cc-b104-41d4-b8da-da4741575327",
+  "displayName": "Pebble Jira Sync",
+  "shortName": "Jira Sync",
+  "longName": "Pebble Jira Sync",
+  "companyName": "galegozi",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk", "emery"],
+  "watchapp": {
+    "watchface": false
+  },
+  "resources": {
+    "media": []
+  }
+}
